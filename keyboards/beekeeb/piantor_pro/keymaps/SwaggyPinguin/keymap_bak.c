@@ -1,13 +1,16 @@
-// Copyright 2023 Noah Dahms (@SwaggyPinguin)
+// Copyright 2022 Diego Palacios (@diepala)
 // SPDX-License-Identifier: GPL-2.0
-// inspired by colemad's keymap (crkbd)
-// QMK Documentation: https://docs.qmk.fm/#/
 
 #include QMK_KEYBOARD_H
 
-#include "layers.h"
-#include "keycodes.h"
-#include "process_records.h"
+enum keyboard_layers {
+  _BL = 0, // Base Layer
+  _SL,     // Symbols Layer / Number Layer
+  _FL,     // Function Layer / Navigation Layer
+  _ML,     // Media Layer
+  _GL,     // Gaming Layer
+  _CM,     // Colemak Layer
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      /*
